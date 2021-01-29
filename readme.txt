@@ -1,14 +1,16 @@
 Installation Steps(Configuration)
-project name - employee leave management system (soruce code available in description below)
-1. Download and Unzip the file on your local system.
-2. copy elms folder and put this file inside root directory(for xampp is htdocs,for wamp is www and for lamp is var/www/
-3. Database Configuration
+
+Project name - Employee Leave Management System
+
+1. Clone the project.
+2. Copy the whole project folder into htdocs folder of your xampp file.
 
 Open phpmyadmin
 
-Create Database elms.
-Import database elms.sql(file available inside the pacakege)
-Open Your browser put inside browser ìhttp://localhost/elms/î
+1. Create Database elms.
+2. Import database elms.sql(file available inside the pacakage)
+3. Open Your browser put inside browser ‚Äúhttp://localhost/folder_name_you_saved/‚Äù
+ 
  Login details for employee
 
 Email id : anuj@gmail.com
