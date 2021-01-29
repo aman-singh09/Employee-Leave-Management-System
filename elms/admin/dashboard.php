@@ -46,54 +46,57 @@ else{
                         <div class="card stats-card">
                             <div class="card-content">
                             
-                                <span class="card-title">Totle Regd Employee</span>
+                                <span class="card-title">Total Regd Employee</span>
                                 <span class="stats-counter">
 <?php
-$sql = "SELECT id from tblemployees";
+$sql = "SELECT tot from totalemployees";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
-$empcount=$query->rowCount();
 ?>
 
-                                    <span class="counter"><?php echo htmlentities($empcount);?></span></span>
+                                    <span class="counter"><?php echo htmlentities($results[0]->tot);?></span></span>
                             </div>
-                            <div id="sparkline-bar"></div>
+                            <div class="progress stats-card-progress">
+                                <div class="determinate" style="width: 70%"></div>
+                            </div>
+                            <!-- <div id="sparkline-bar"></div> -->
                         </div>
                     </div>
                         <div class="col s12 m12 l4">
                         <div class="card stats-card">
                             <div class="card-content">
                             
-                                <span class="card-title">Listed Departments </span>
+                                <span class="card-title">Total Listed Departments </span>
     <?php
-$sql = "SELECT id from tbldepartments";
+$sql = "SELECT tot from totaldepartment";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
-$dptcount=$query->rowCount();
 ?>                            
-                                <span class="stats-counter"><span class="counter"><?php echo htmlentities($dptcount);?></span></span>
+                                <span class="stats-counter"><span class="counter"><?php echo htmlentities($results[0]->tot);?></span></span>
                             </div>
-                            <div id="sparkline-line"></div>
+                            <div class="progress stats-card-progress">
+                                <div class="determinate" style="width: 60%"></div>
+                            </div>
+                            <!-- <div id="sparkline-line"></div> -->
                         </div>
                     </div>
                     <div class="col s12 m12 l4">
                         <div class="card stats-card">
                             <div class="card-content">
-                                <span class="card-title">Listed leave Type</span>
+                                <span class="card-title">Total Listed leave Type</span>
                                     <?php
-$sql = "SELECT id from  tblleavetype";
+$sql = "SELECT tot from  totalleavetype";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
-$leavtypcount=$query->rowCount();
 ?>   
-                                <span class="stats-counter"><span class="counter"><?php echo htmlentities($leavtypcount);?></span></span>
+                                <span class="stats-counter"><span class="counter"><?php echo htmlentities($results[0]->tot);?></span></span>
                       
                             </div>
                             <div class="progress stats-card-progress">
-                                <div class="determinate" style="width: 70%"></div>
+                                <div class="determinate" style="width: 90%"></div>
                             </div>
                         </div>
                     </div>
